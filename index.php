@@ -29,7 +29,8 @@
 					<td><?php echo $name; ?></td>
 					<td><?php echo $preview; ?></td>
 					<td><a href="edit.php?id=<?php echo $id; ?>"><i class="fas fa-edit"></i></a> |
-<a href=""><i class="fas fa-trash-alt"></i></a></td>
+						<a href="del.php?id=<?php echo $id; ?>"><i class="fas fa-trash-alt"></i></a>
+					</td>
 				</tr>
 				<?php
 					}

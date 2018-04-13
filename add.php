@@ -2,18 +2,18 @@
 <body>
 <?php
 	if(isset($_GET['add'])){
-	$name = $_GET['name'];
-	$preview = $_GET['preview'];
-	$query = $conn->prepare("insert into news(name,preview)
-													values ('$name', '$preview');");
-	$check = $query->execute();
-	$result = $query->setFetchMode(PDO::FETCH_ASSOC);
-	if($check == true ){
-			header("LOCATION:index.php?msg=Bạn đã thêm thành công!Xin chúc mừng @@");
-			exit();
-	}else{ 
-			echo "Có lỗi xảy ra rồi! Nhập lại đi cưng!";
-	}        
+		$name = $_GET['name'];
+		$preview = $_GET['preview'];
+		$query = $conn->prepare("insert into news(name,preview)
+														values ('$name', '$preview');");
+		$check = $query->execute();
+		$result = $query->setFetchMode(PDO::FETCH_ASSOC);
+		if($check == true ){
+				header("LOCATION:index.php?msg=Bạn đã thêm thành công!Xin chúc mừng @@");
+				exit();
+		}else{ 
+				echo "Có lỗi xảy ra rồi! Nhập lại đi cưng!";
+		}        
 	}
 ?>
 	<form method="get" enctype="multipart/form-data">

@@ -15,11 +15,11 @@
 			$stmt->execute();
 			$result = $stmt->fetch(PDO::FETCH_ASSOC);
 			$id = $result['id'];
+			
 			$name = $result['name'];
 			$preview = $result['preview'];
 
 			if(isset($_GET['edit'])){
-				echo $id;
 				$name_edit = $_GET['name'];
 				$preview_edit = $_GET['preview'];
 				$query_edit = $conn->prepare("update news set name = '{$name_edit}', preview = '{$preview_edit}' where id = '{$id}';");

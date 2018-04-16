@@ -5,7 +5,8 @@
 	<?php
     $sql_pag = $conn->prepare("select count(id) from news");
     $sql_pag->execute();
-    $row = $sql_pag->fetchColumn();
+	$row = $sql_pag->fetchColumn();
+	echo ($row);
     $limit = 5;
     if(isset($_GET["page"])){
       $current_page=$_GET["page"];

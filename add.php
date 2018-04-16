@@ -17,8 +17,8 @@
 	}
 ?>
 	<form method="get" enctype="multipart/form-data">
-		<input type="text" name="name" placeholder="Edit name">
-		<textarea name="preview" rows="4" cols="50"></textarea>
+		<input type="text" name="name" placeholder="Add name">
+		<textarea name="preview" rows="4" cols="50" placeholder="Add preview"></textarea>
 		<button type="submit" name="add">Add News</button>
 	</form>
 </body>
